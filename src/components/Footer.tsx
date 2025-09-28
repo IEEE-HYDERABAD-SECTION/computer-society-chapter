@@ -4,15 +4,17 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <footer className="bg-gray-900 text-white py-16">
+      <div className="max-w-8xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="grid md:grid-cols-4 gap-8">
           <div>
-            <div className="flex items-center mb-4">
-              <div className="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center">
-                <Code className="w-6 h-6 text-white" />
-              </div>
-              <div className="ml-3">
+            <div className="mb-4">
+              <img 
+                src="/ieee-logo.png" 
+                alt="IEEE Computer Society Logo" 
+                className="h-24 w-auto mb-4"
+              />
+              <div>
                 <div className="text-lg font-bold">IEEE Computer Society</div>
                 <div className="text-sm text-gray-400">Hyderabad Section</div>
               </div>

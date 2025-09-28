@@ -3,7 +3,7 @@ import { Award, Users, Globe, Target, Eye, Heart } from 'lucide-react';
 
 const About = () => {
   return (
-    <div className="pt-16">
+    <div className="pt-28">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-orange-500 to-orange-600 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

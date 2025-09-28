@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Menu, X, Code } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
+import IEEENavbar from './IEEENavbar';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,27 +25,27 @@ const Header = () => {
   };
 
   return (
-    <nav className="bg-white shadow-md fixed w-full z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
+    <div className="fixed w-full z-50">
+      <IEEENavbar />
+      <nav className="bg-white shadow-md">
+        <div className="max-w-8xl mx-auto px-6 sm:px-8 lg:px-12">
+        <div className="flex justify-between h-20">
           <div className="flex items-center">
-            <Link to="/" className="flex-shrink-0 flex items-center">
-              <div className="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center">
-                <Code className="w-6 h-6 text-white" />
-              </div>
-              <div className="ml-3">
-                <div className="text-lg font-bold text-orange-500">IEEE Computer Society</div>
-                <div className="text-sm text-gray-600">Hyderabad Section</div>
-              </div>
+            <Link to="/" className="flex-shrink-0 ml-20">
+              <img 
+                src="/ieee-logo.png" 
+                alt="IEEE Computer Society Logo" 
+                className="h-16 w-auto"
+              />
             </Link>
           </div>
           
-          <div className="hidden lg:flex items-center space-x-6">
+          <div className="hidden lg:flex items-center space-x-8">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 to={item.href}
-                className={`px-3 py-2 text-sm font-medium transition-colors duration-200 ${
+                className={`px-4 py-3 text-base font-medium transition-colors duration-200 ${
                   isActive(item.href)
                     ? 'text-orange-500 border-b-2 border-orange-500'
                     : 'text-gray-700 hover:text-orange-500'
@@ -87,7 +88,8 @@ const Header = () => {
           </div>
         </div>
       )}
-    </nav>
+      </nav>
+    </div>
   );
 };
 

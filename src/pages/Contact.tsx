@@ -41,7 +41,7 @@ const Contact = () => {
     {
       icon: <MapPin className="w-6 h-6" />,
       title: "Address",
-      details: "IEEE Hyderabad Section\nHITEC City, Hyderabad\nTelangana 500081, India",
+      details: "No: 644-645\nAl-Karim Trade Center\nRanigunj\nSecunderabad\n500003",
       link: null
     },
     {
@@ -55,7 +55,7 @@ const Contact = () => {
   const officeLocations = [
     {
       name: "Main Office",
-      address: "HITEC City, Hyderabad",
+      address: "No: 644-645, Al-Karim Trade Center, Ranigunj, Secunderabad, 500003",
       phone: "+91 40 2345 6789",
       email: "hyderabad@computer.org"
     },
@@ -74,7 +74,7 @@ const Contact = () => {
   ];
 
   return (
-    <div className="pt-16">
+    <div className="pt-28">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-orange-500 to-orange-600 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -272,7 +272,7 @@ const Contact = () => {
               Find Us
             </h2>
             <p className="text-xl text-gray-600">
-              Located in the heart of Hyderabad's technology corridor
+              Located in the heart of Secunderabad's business district
             </p>
           </div>
 
@@ -280,7 +280,7 @@ const Contact = () => {
             <div className="text-center">
               <MapPin className="w-16 h-16 text-gray-400 mx-auto mb-4" />
               <p className="text-gray-600">Interactive map would be embedded here</p>
-              <p className="text-sm text-gray-500 mt-2">HITEC City, Hyderabad, Telangana 500081</p>
+              <p className="text-sm text-gray-500 mt-2">No: 644-645, Al-Karim Trade Center, Ranigunj, Secunderabad, 500003</p>
             </div>
           </div>
         </div>

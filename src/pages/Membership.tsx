@@ -5,7 +5,7 @@ const Membership = () => {
   const membershipTiers = [
     {
       title: "Student Membership",
-      price: "₹500/year",
+      price: "$50/year",
       description: "Perfect for undergraduate and graduate students",
       features: [
         "Access to IEEE Xplore Digital Library",
@@ -23,7 +23,7 @@ const Membership = () => {
     },
     {
       title: "Professional Membership",
-      price: "₹2,500/year",
+      price: "$200/year",
       description: "For working professionals and researchers",
       features: [
         "Full IEEE Xplore Digital Library access",
@@ -37,27 +37,9 @@ const Membership = () => {
         "Leadership training programs",
         "Global IEEE community access"
       ],
-      popular: true,
+      popular: false,
       buttonText: "Join as Professional",
       color: "orange"
-    },
-    {
-      title: "Corporate Membership",
-      price: "Contact Us",
-      description: "For organizations and companies",
-      features: [
-        "Multiple employee memberships",
-        "Corporate event partnerships",
-        "Recruitment and hiring opportunities",
-        "Custom training programs",
-        "Industry collaboration projects",
-        "Branding and sponsorship opportunities",
-        "Technical consulting services",
-        "Research partnership opportunities"
-      ],
-      popular: false,
-      buttonText: "Contact Sales",
-      color: "gray"
     }
   ];
 
@@ -85,7 +67,7 @@ const Membership = () => {
   ];
 
   return (
-    <div className="pt-16">
+    <div className="pt-28">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-orange-500 to-orange-600 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -139,7 +121,7 @@ const Membership = () => {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-8">
+          <div className="grid lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {membershipTiers.map((tier, index) => (
               <div 
                 key={index}
@@ -169,15 +151,18 @@ const Membership = () => {
                     ))}
                   </ul>
                   
-                  <button 
-                    className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors duration-200 ${
+                  <a
+                    href="https://www.ieee.org/membership/join/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors duration-200 inline-block text-center ${
                       tier.popular 
                         ? 'bg-orange-500 text-white hover:bg-orange-600' 
                         : 'bg-gray-900 text-white hover:bg-gray-800'
                     }`}
                   >
                     {tier.buttonText}
-                  </button>
+                  </a>
                 </div>
               </div>
             ))}
