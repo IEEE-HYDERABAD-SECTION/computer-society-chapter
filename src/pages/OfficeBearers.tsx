@@ -45,66 +45,66 @@ const OfficeBearers = () => {
   return (
     <div className="pt-28">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-orange-500 to-orange-600 text-white py-20">
+      <section className="bg-gradient-to-r from-orange-500 to-orange-600 text-white py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Office Bearers</h1>
-          <p className="text-xl text-orange-100 max-w-3xl mx-auto">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6">Office Bearers</h1>
+          <p className="text-lg sm:text-xl text-orange-100 max-w-3xl mx-auto px-4">
             Meet our dedicated leadership team driving innovation and excellence in the tech community
           </p>
         </div>
       </section>
 
       {/* Executive Committee */}
-      <section className="py-20 bg-white">
+      <section className="py-12 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Executive Committee
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-lg sm:text-xl text-gray-600 px-4">
               Our executive leadership team guiding the chapter's strategic direction
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
             {executiveCommittee.map((member, index) => (
               <div 
                 key={index}
-                className="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow duration-300"
+                className="bg-gray-50 rounded-xl p-6 md:p-8 hover:shadow-lg transition-shadow duration-300"
               >
-                <div className="flex items-start mb-6">
-                  <div className="w-20 h-20 bg-orange-500 rounded-full flex items-center justify-center mr-6">
-                    <Users className="w-10 h-10 text-white" />
+                <div className="flex flex-col sm:flex-row items-center sm:items-start mb-6">
+                  <div className="w-16 h-16 md:w-20 md:h-20 bg-orange-500 rounded-full flex items-center justify-center mb-4 sm:mb-0 sm:mr-6">
+                    <Users className="w-8 h-8 md:w-10 md:h-10 text-white" />
                   </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-1">{member.name}</h3>
-                    <p className="text-orange-500 font-semibold text-lg mb-2">{member.position}</p>
-                    <p className="text-gray-600 mb-4">{member.affiliation}</p>
+                  <div className="flex-1 text-center sm:text-left">
+                    <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-1">{member.name}</h3>
+                    <p className="text-orange-500 font-semibold text-base md:text-lg mb-2">{member.position}</p>
+                    <p className="text-gray-600 mb-4 text-sm md:text-base">{member.affiliation}</p>
                   </div>
                 </div>
                 
-                <p className="text-gray-700 mb-6">{member.bio}</p>
+                <p className="text-gray-700 mb-6 text-sm md:text-base">{member.bio}</p>
                 
                 <div className="space-y-3 mb-6">
-                  <div className="flex items-center text-gray-600">
-                    <Mail className="w-4 h-4 mr-3" />
-                    <a href={`mailto:${member.email}`} className="hover:text-orange-500 transition-colors">
+                  <div className="flex items-center text-gray-600 text-sm md:text-base">
+                    <Mail className="w-4 h-4 mr-3 flex-shrink-0" />
+                    <a href={`mailto:${member.email}`} className="hover:text-orange-500 transition-colors break-all">
                       {member.email}
                     </a>
                   </div>
-                  <div className="flex items-center text-gray-600">
-                    <Phone className="w-4 h-4 mr-3" />
+                  <div className="flex items-center text-gray-600 text-sm md:text-base">
+                    <Phone className="w-4 h-4 mr-3 flex-shrink-0" />
                     <span>{member.phone}</span>
                   </div>
                 </div>
                 
                 <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">Key Achievements:</h4>
+                  <h4 className="font-semibold text-gray-900 mb-2 text-sm md:text-base">Key Achievements:</h4>
                   <div className="flex flex-wrap gap-2">
                     {member.achievements.map((achievement, achIndex) => (
                       <span 
                         key={achIndex}
-                        className="px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-sm"
+                        className="px-2 md:px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-xs md:text-sm"
                       >
                         {achievement}
                       </span>
@@ -119,17 +119,17 @@ const OfficeBearers = () => {
 
 
       {/* Contact Leadership */}
-      <section className="py-20 bg-orange-500 text-white">
+      <section className="py-12 md:py-20 bg-orange-500 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-4">Connect with Our Leadership</h2>
-          <p className="text-xl text-orange-100 mb-8 max-w-2xl mx-auto">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-4">Connect with Our Leadership</h2>
+          <p className="text-lg sm:text-xl text-orange-100 mb-8 max-w-2xl mx-auto px-4">
             Have questions or suggestions? Our leadership team is always available to connect with members and the community.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-orange-500 px-8 py-3 rounded-lg font-semibold hover:bg-orange-50 transition-colors duration-200">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center px-4">
+            <button className="bg-white text-orange-500 px-6 md:px-8 py-3 rounded-lg font-semibold hover:bg-orange-50 transition-colors duration-200 text-sm md:text-base">
               Contact Executive Committee
             </button>
-            <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-orange-500 transition-colors duration-200">
+            <button className="border border-white text-white px-6 md:px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-orange-500 transition-colors duration-200 text-sm md:text-base">
               Join a Committee
             </button>
           </div>
